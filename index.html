@@ -1,131 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>TypeScript Technical Documentation</title>
 </head>
+
 <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <header class="main-header">
         TypeScript for JavaScript Programmers
     </header>
-    <nav id="navbar"
-        <div class="content">
-            <div class="brand-name">
-                <header>TS Documentation</header>
+    <div class="wraper">
+        <nav id="navbar">
+            <div class="content">
+                <div class="brand-name">
+                    <header>TS Documentation</header>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a class="nav-link" href="#what_is_typescript?">What is TypeScript?</a></li>
+                        <li><a class="nav-link" href="#basic_types">Basic Types</a></li>
+                        <ol>
+                            <li><a class="sub-nav-link" href="#boolean">Boolean</a></li>
+                            <li><a class="sub-nav-link" href="#number">Number</a></li>
+                            <li><a class="sub-nav-link" href="#string">String</a></li>
+                            <li><a class="sub-nav-link" href="#array">Array</a></li>
+                            <li><a class="sub-nav-link" href="#tuple">Tuple</a></li>
+                            <li><a class="sub-nav-link" href="#enum">Enum</a></li>
+                            <li><a class="sub-nav-link" href="#unknown">Unknown</a></li>
+                            <li><a class="sub-nav-link" href="#any">Any</a></li>
+                            <li><a class="sub-nav-link" href="#void">Void</a></li>
+                            <li><a class="sub-nav-link" href="#null_and_undefined">Null and Undefined</a></li>
+                            <li><a class="sub-nav-link" href="#never">Never</a></li>
+                            <li><a class="sub-nav-link" href="#object">Object</a></li>
+                            <li><a class="sub-nav-link" href="#type_assertions">Type Assertions</a></li>
+                            <li><a class="sub-nav-link" href="#a_note_about_let">A note about let</a></li>
+                            <li><a class="sub-nav-link" href="#about_number_string_boolean_symbol_and_object">About
+                                    Number, String, Boolean, Symbol and Object</a></li>
+                        </ol>
+                        <li><a class="nav-link" href="#types_by_inference">Types by Inference</a></li>
+                        <li><a class="nav-link" href="#defining_types">Defining Types</a></li>
+                        <li><a class="nav-link" href="#composing_types">Composing Types</a></li>
+                        <li><a class="nav-link" href="#union">Union</a></li>
+                        <li><a class="nav-link" href="#generics">Generics</a></li>
+                        <li><a class="nav-link" href="#structural_type_system">Structural Type System</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a class="nav-link" href="#what_is_typescript?">What is TypeScript?</a></li>
-                    <li><a class="nav-link" href="#basic_types">Basic Types</a></li>
-                    <ol>
-                        <li><a class="sub-nav-link" href="#boolean">Boolean</a></li>
-                        <li><a class="sub-nav-link" href="#number">Number</a></li>
-                        <li><a class="sub-nav-link" href="#string">String</a></li>
-                        <li><a class="sub-nav-link" href="#array">Array</a></li>
-                        <li><a class="sub-nav-link" href="#tuple">Tuple</a></li>
-                        <li><a class="sub-nav-link" href="#enum">Enum</a></li>
-                        <li><a class="sub-nav-link" href="#unknown">Unknown</a></li>
-                        <li><a class="sub-nav-link" href="#any">Any</a></li>
-                        <li><a class="sub-nav-link" href="#void">Void</a></li>
-                        <li><a class="sub-nav-link" href="#null_and_undefined">Null and Undefined</a></li>
-                        <li><a class="sub-nav-link" href="#never">Never</a></li>
-                        <li><a class="sub-nav-link" href="#object">Object</a></li>
-                        <li><a class="sub-nav-link" href="#type_assertions">Type Assertions</a></li>
-                        <li><a class="sub-nav-link" href="#a_note_about_let">A note about let</a></li>
-                        <li><a class="sub-nav-link" href="#about_number_string_boolean_symbol_and_object">About Number, String, Boolean, Symbol and Object</a></li>
-                    </ol>
-                    <li><a class="nav-link" href="#types_by_inference">Types by Inference</a></li>
-                    <li><a class="nav-link" href="#defining_types">Defining Types</a></li>
-                    <li><a class="nav-link" href="#composing_types">Composing Types</a></li>
-                    <li><a class="nav-link" href="#union">Union</a></li>
-                    <li><a class="nav-link" href="#generics">Generics</a></li>
-                    <li><a class="nav-link" href="#structural_type_system">Structural Type System</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main id="main-doc">
-        <div class="content">
-            <section class="main-section" id="what_is_typescript?">
-                <header>What is TypeScript?</header>
+        </nav>
+        <main id="main-doc">
+            <div class="content">
+                <section class="main-section" id="what_is_typescript?">
+                    <header>What is TypeScript?</header>
+                    <article>
+                        <p>TypeScript is an open-source language which builds on JavaScript, one of the world’s
+                            most used tools, by adding static type definitions.</p>
+                        <p>Types provide a way to describe the shape of an object, providing better documentation, and
+                            allowing
+                            TypeScript to validate that your code is working correctly.</p>
 
-            </section>
-            <section class="main-section" id="basic_types">
-                <header>Basic Types</header>
-                
-                <article>
-                    boolean, Number, string, array, tuple, enum, unknown, any, void, null and undefined, never, objects,
-                    type asswertions, a note about let and (about number, string, Boolean, Symbol and object)
-                    
-                    <section class="sub-section" id="boolean">
-                    <header>Boolean</header>
+                        <p>Writing types can be optional in TypeScript, because type inference allows you to get a lot
+                            of power without writing additional code.</p>
+                        <p>All valid JavaScript code is also TypeScript code. You might get type-checking errors, but
+                            that
+                            won't stop you from running the resulting JavaScript. While you can go for stricter
+                            behavior,
+                            that means you're still in control.</p>
+                        <p>TypeScript code is transformed into JavaScript code via the TypeScript compiler or <a
+                                href="https://babeljs.io/" target="_blank">Babel</a>. This
+                            JavaScript is clean, simple code which runs anywhere JavaScript runs: In a browser, on
+                            Node.JS
+                            or in your apps.</p>
+                        <p>Adopting TypeScript is not a binary choice, you can start by annotating existing JavaScript
+                            with
+                            JSDoc, then switch a few files to be checked by TypeScript and over time prepare your
+                            codebase
+                            to convert completely.</p>
+                        <p>The relationship between TypeScript and JavaScript is rather unique among modern programming
+                            languages. TypeScript sits as a layer on-top of JavaScript, offering the features of
+                            JavaScript and then adds its own layer on top of that. This layer is the TypeScript type
+                            system.</p>
+                        <p>JavaScript already has a set of language primitives like <em>string</em>, <em>number</em>,
+                            <em>object</em>, <em>undefined</em> etc, however there are no ahead-of-time checks that
+                            these are consistently assigned across your whole codebase. TypeScript acts as that layer.
+                        </p>
+                        <p></p>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="basic_types">
+                    <header>Basic Types</header>
+
+                    <article>
+                        <p>For programs to be useful, we need to be able to work with some of the simplest units of
+                            data:
+                            <ul>
+                                <li>numbers,</li>
+                                <li>strings,</li>
+                                <li>structures,</li>
+                                <li>boolean values,</li>
+                                <li>and the like.</li>
+                            </ul>
+                            In TypeScript, we support
+                            the same types as you would expect in JavaScript, with an extra enumeration type thrown in
+                            to help things along.</p>
+                        <section class="sub-section" id="boolean">
+                            <header>Boolean</header>
+                            <article>
+                                <p>The most basic datatype is the simple true/false value, which JavaScript and
+                                    TypeScript call a <em>boolean</em> value.</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">isDone<span
+                                                    class="tooltip-text">let isDone: boolean</span></span>: boolean
+                                            =</span>
+                                        <span class="function">false</span>;
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="number">
+                            <header>Number</header>
+                            <article>
+                                <p>As in JavaScript, all numbers in TypeScript are either floating point values or
+                                    BigIntegers. These floating point numbers get the type <em>number</em>, while
+                                    BigIntegers get the type <em>bigint</em>. In addition to hexadecimal and decimal
+                                    literals, TypeScript also supports binary and octal literals introduced in
+                                    ECMAScript 2015.</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">decimal<span
+                                                    class="tooltip-text">let decimal: number</span></span>: number =
+                                        </span>
+                                        <span class="number">6</span>;<br>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">hex<span class="tooltip-text">let
+                                                    hex: number</span></span>: number = </span>
+                                        <span class="number">0xf00d</span>;<br>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">binary<span
+                                                    class="tooltip-text">let binary: number</span></span>: number =
+                                        </span>
+                                        <span class="number">0b1010</span>;<br>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">octal<span class="tooltip-text">let
+                                                    octal: number</span></span>: number = </span>
+                                        <span class="number">0o744</span>;<br>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">big<span class="tooltip-text">let
+                                                    big: bigint</span></span>: number = </span>
+                                        <span class="variable">100n;</span>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="string">
+                            <header>String</header>
+                            <article>
+                                <p>Another fundamental part of creating programs in JavaScript for webpages and servers
+                                    alike is working with textual data. As in other languages, we use the type
+                                    <em>string</em> to refer to these textual datatypes. Just like JavaScript,
+                                    TypeScript also uses double quotes (") or single quotes (') to surround string data.
+                                </p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">color<span class="tooltip-text">let
+                                                    color: string</span></span>: string = </span>
+                                        <span class="string">"blue"</span>;<br>
+                                        <span class="variable"><span class="tooltip">color<span class="tooltip-text">let
+                                                    color: string</span></span> = </span>
+                                        <span class="string">"red"</span>
+                                    </code>
+                                </div>
+                                <p>You can also use <em>template strings</em>, which can span multiple lines and have
+                                    embedded expressions. These strings are surrounded by the backtick/backquote (`)
+                                    character, and embedded expressions are of the form <em>${ expr }</em>.</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">fullName<span
+                                                    class="tooltip-text">let
+                                                    fullName: string</span></span>: string = </span>
+                                        <span class="string">`Bob Bobbington`</span>;<br>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">age<span class="tooltip-text">let
+                                                    age: number</span></span>: number = </span>
+                                        <span class="number">37</span>;<br>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">sentence<span
+                                                    class="tooltip-text">let
+                                                    sentence: string</span></span>: string = </span>
+                                        <span class="string">`Hello, my name is ${fullName}.</br>
+                                            </br>
+                                            I'll be ${age + 1} years old next month.`;</span>;</br>
+                                    </code>
+                                </div>
+                                <p>This is equivalent to declaring <em>sentence</em> like so:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">sentence<span
+                                                    class="tooltip-text">let
+                                                    sentence: string</span></span>: string = </span></br>
+                                        <span class="string">"Hello, my name is " + </br>
+                                            <span class="variable"><span class="tooltip">fullName<span
+                                                        class="tooltip-text">let
+                                                        fullName: string</span></span> + </br>".\n\n" + </br>
+                                                "I'll be " + </br>
+                                                (age + 1) + </br>
+                                                " years old next month."</span>;
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="array">
+                            <header>Array</header>
+                            <article>
+                                <p>TypeScript, like JavaScript, allows you to work with arrays of values. Array types
+                                    can be written in one of two ways. In the first, you use the type of the elements
+                                    followed by <em>[]</em> to denote an array of that element type:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">list<span class="tooltip-text">let
+                                                    list: number[]</span></span>: number[] = </span>
+                                        [<span class="number">1</span>, <span class="number">2</span>, <span
+                                            class="number">3</span>];<br>
+                                    </code>
+                                </div>
+                                <p>The second way uses a generic array type, <em>Array&lt;elemType&gt;</em>:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span>
+                                        <span class="variable"><span class="tooltip">list <span class="tooltip-text">let
+                                                    list: number[]</span>
+                                                : <span class="tooltip">Array<span class="tooltip-text">interface
+                                                        Array&lt;T&gt;</span></span>&lt;number&gt;</span></span> =
+                                        [<span class="number">1</span>, <span class="number">2</span>, <span
+                                            class="number">3</span>];<br>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="tuple">
+                            <header>Tuple</header>
+                            <article>
+                                <p>Tuple types allow you to express an array with a fixed number of elements whose types
+                                    are known, but need not be the same. For example, you may want to represent a value
+                                    as a pair of a string and a number:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="comment">// Declare a tuple type</span></br>
+                                        <span class="function">let</span> <span class="variable"><span
+                                                class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                    number]</span></span>: [string, number];</span></br>
+                                        <span class="comment">// Initialize it</span></br>
+                                        <span class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                number]</span></span> = [<span class="string">"hello"</span>, <span
+                                            class="number">10</span>];<span class="comment">// OK</span></br>
+                                        <span class="comment">// Initialize it incorrectly</span></br>
+                                        <span class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                number]</span></span> = [<span class="number err">10</span>, <span
+                                            class="string err">"hello"</span>]; <span class="comment">//
+                                            Error</span></br>
+                                        <span class="error">Type 'number' is not assignable to type 'string'.</br>
+                                            Type 'string' is not assignable to type 'number'.</span>
+                                    </code>
+                                </div>
+                                <p>When accessing an element with a known index, the correct type is retrieved:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="comment">// OK</span></br>
+                                        <span class="variable"><span class="tooltip">console<span
+                                                    class="tooltip-text">var console:Console</span></span>.<span
+                                                class="tooltip">log<span class="tooltip-text">(method)
+                                                    Console.log(...data: any[]): void</span></span>(<span
+                                                class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                    number]</span></span>[<span class="number">0</span>].<span
+                                                class="tooltip">substring<span class="tooltip-text">(method)
+                                                    String.substring(start: number, end?: number | undefined):
+                                                    string</span></span>(<span
+                                                class="number">1</span>));</span></br></br>
+
+                                        <span class="variable"><span class="tooltip">console<span
+                                                    class="tooltip-text">var console:Console</span></span>.<span
+                                                class="tooltip">log<span class="tooltip-text">(method)
+                                                    Console.log(...data: any[]): void</span></span>(<span
+                                                class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                    number]</span></span>[<span class="number">1</span><span
+                                                class="err">].</span><span class="tooltip"><span
+                                                    class="err">substring</span><span
+                                                    class="tooltip-text">any</span></span><span
+                                                class="err">(</span><span class="number">1</span>));</span></br>
+                                        <span class="error">Property 'substring' does not exist on type 'number'.</span>
+                                    </code>
+                                </div>
+                                <p>Accessing an element outside the set of known indices fails with an error:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                number]</span></span>[<span class="number err">3</span>] = <span
+                                            class="string">"word"</span>;</br>
+                                        <span class="error">Tuple type '[string, number]' of length '2' has no element
+                                            at index '3'.</span></br></br>
+
+                                        <span class="variable"><span class="tooltip">console<span
+                                                    class="tooltip-text">var console:Console</span></span>.<span
+                                                class="tooltip">log<span class="tooltip-text">(method)
+                                                    Console.log(...data: any[]): void</span></span>(<span
+                                                class="tooltip">x<span class="tooltip-text">let x: [string,
+                                                    number]</span></span>[<span class="number err">5</span>].<span
+                                                class="tooltip">toString<span class="tooltip-text">(method)
+                                                    String.substring(start: number, end?: number | undefined):
+                                                    string</span></span>());</span></br>
+                                        <span class="error">Object is possibly 'undefined'.</br>
+                                            Tuple type '[string, number]' of length '2' has no element at index
+                                            '5'.</span>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="enum">
+                            <header>Enum</header>
+                            <article>
+                                <p>A helpful addition to the standard set of datatypes from JavaScript is the enum. As
+                                    in languages like C#, an <em>enum</em> is a way of giving more friendly names to
+                                    sets of numeric values.</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">enum</span> <span class="tooltip">Color<span
+                                                class="tooltip-text">enum Color</span></span>{</br>
+                                        <span class="tooltip">&nbsp;Red<span class="tooltip-text">(enum member)
+                                                Color.Red = 0</span></span>,</br>
+                                        <span class="tooltip">&nbsp;Green<span class="tooltip-text">(enum member)
+                                                Color.Green = 1</span></span>,</br>
+                                        <span class="tooltip">&nbsp;Blue<span class="tooltip-text">(enum member)
+                                                Color.Green = 2</span></span>,</br>
+                                        }</br>
+                                        <span class="function">let</span> <span class="tooltip">c<span
+                                                class="tooltip-text">let c: Color</span></span>:
+                                        <span class="tooltip">Color<span class="tooltip-text">enum Color</span></span> =
+                                        <span class="tooltip">Color<span class="tooltip-text">enum
+                                                Color</span></span>.<span class="tooltip">Green<span
+                                                class="tooltip-text">(enum member) Color.Green = 1</span></span>;</br>
+                                    </code>
+                                </div>
+                                <p>By default, enums begin numbering their members starting at <em>0</em>. You can
+                                    change this by manually setting the value of one of its members. For example, we can
+                                    start the previous example at <em>1</em> instead of <em>0</em>:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">enum</span> <span class="tooltip">Color<span
+                                                class="tooltip-text">enum Color</span></span>{</br>
+                                        <span class="tooltip">&nbsp;Red<span class="tooltip-text">(enum member)
+                                                Color.Red = 1</span></span> = <span class="number">1</span>,</br>
+                                        <span class="tooltip">&nbsp;Green<span class="tooltip-text">(enum member)
+                                                Color.Green = 2</span></span>,</br>
+                                        <span class="tooltip">&nbsp;Blue<span class="tooltip-text">(enum member)
+                                                Color.Green = 3</span></span>,</br>
+                                        }</br>
+                                        <span class="function">let</span> <span class="tooltip">c<span
+                                                class="tooltip-text">let c: Color</span></span>:
+                                        <span class="tooltip">Color<span class="tooltip-text">enum Color</span></span> =
+                                        <span class="tooltip">Color<span class="tooltip-text">enum
+                                                Color</span></span>.<span class="tooltip">Green<span
+                                                class="tooltip-text">(enum member) Color.Green = 2</span></span>;</br>
+                                    </code>
+                                </div>
+                                <p>Or, even manually set all the values in the enum:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">enum</span> <span class="tooltip">Color<span
+                                                class="tooltip-text">enum Color</span></span>{</br>
+                                        <span class="tooltip">&nbsp;Red<span class="tooltip-text">(enum member)
+                                                Color.Red = 1</span></span> = <span class="number">1</span>,</br>
+                                        <span class="tooltip">&nbsp;Green<span class="tooltip-text">(enum member)
+                                                Color.Green = 2</span></span> = <span class="number">2</span>,</br>
+                                        <span class="tooltip">&nbsp;Blue<span class="tooltip-text">(enum member)
+                                                Color.Green = 3</span></span> = <span class="number">3</span>,</br>
+                                        }</br>
+                                        <span class="function">let</span> <span class="tooltip">c<span
+                                                class="tooltip-text">let c: Color</span></span>:
+                                        <span class="tooltip">Color<span class="tooltip-text">enum Color</span></span> =
+                                        <span class="tooltip">Color<span class="tooltip-text">enum
+                                                Color</span></span>.<span class="tooltip">Green<span
+                                                class="tooltip-text">(enum member) Color.Green = 2</span></span>;</br>
+                                    </code>
+                                </div>
+                                <p>A handy feature of enums is that you can also go from a numeric value to the name of
+                                    that value in the enum. For example, if we had the value <em>2</em> but weren’t sure
+                                    what that mapped to in the Color <em>enum</em> above, we could look up the
+                                    corresponding name:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">enum</span> <span class="tooltip">Color<span
+                                                class="tooltip-text">enum Color</span></span>{</br>
+                                        <span class="tooltip">&nbsp;Red<span class="tooltip-text">(enum member)
+                                                Color.Red = 1</span></span> = <span class="number">1</span>,</br>
+                                        <span class="tooltip">&nbsp;Green<span class="tooltip-text">(enum member)
+                                                Color.Green = 2</span></span>,</br>
+                                        <span class="tooltip">&nbsp;Blue<span class="tooltip-text">(enum member)
+                                                Color.Green = 3</span></span>,</br>
+                                        }</br>
+                                        <span class="function">let</span> <span class="tooltip">colorName<span
+                                                class="tooltip-text">let colorName: string</span></span>:
+                                        <span class="tooltip">string<span class="tooltip-text">enum Color</span></span>
+                                        =
+                                        <span class="tooltip">Color<span class="tooltip-text">enum
+                                                Color</span></span>[<span class="number">2</span>];</br></br>
+                                        <span class="comment">// Displays 'Green'</span></br>
+                                        <span class="variable"><span class="tooltip">console<span
+                                                    class="tooltip-text">var console:Console</span></span>.<span
+                                                class="tooltip">log<span class="tooltip-text">(method)
+                                                    Console.log(...data: any[]): void</span></span>(<span
+                                                class="tooltip">colorName<span class="tooltip-text">let colorName:
+                                                    string</span></span>);</span></br>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="unknown">
+                            <header>Unknown</header>
+                            <article>
+                                <p>We may need to describe the type of variables that we do not know when we are writing
+                                    an
+                                    application. These values may come from dynamic content – e.g. from the user – or we
+                                    may
+                                    want to intentionally accept all values in our API. In these cases, we want to
+                                    provide a
+                                    type that tells the compiler and future readers that this variable could be
+                                    anything, so
+                                    we give it the <em>unknown</em> type.</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span> <span class="tooltip">notSure<span
+                                                class="tooltip-text"></span></span>: unknown = <span
+                                            class="number">4</span>;</br>
+                                        <span class="tooltip">notSure<span class="tooltip-text">let notSure:
+                                                unknown</span></span> = <span class="string">"maybe a string
+                                            instead"</span>;</br></br>
+                                        <span class="comment">// OK, definitely a boolean</span></br>
+                                        <span class="tooltip">notSure<span class="tooltip-text">let notSure:
+                                                unknown</span></span> = <span class="function">false</span>;
+                                    </code>
+                                </div>
+                                <p>If you have a variable with an unknown type, you can narrow it to something more
+                                    specific by doing <em>typeof</em> checks, comparison checks, or more advanced type
+                                    guards that will be discussed in a later chapter:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">declare const</span> <span class="tooltip">maybe<span
+                                                class="tooltip-text">const maybe: unknown</span></span>: unknown;</br>
+                                        <span class="comment">// 'maybe' could be a string, object, boolean, undefined,
+                                            or other types</span><br>
+                                        <span class="function">const</span> <span class="tooltip err">aNumber<span
+                                                class="tooltip-text">const aNumber: number</span></span>: number =
+                                        maybe;</br>
+                                        <span class="error">Type 'unknown' is not assignable to type
+                                            'number'.</span><br><br>
+                                        <span class="function">if</span> (<span class="tooltip">maybe<span
+                                                class="tooltip-text">const maybe: unknown</span></span> === <span
+                                            class="function">true</span>) {<br>
+                                        <span class="comment">&nbsp;// TypeScript knows that maybe is a boolean
+                                            now</span><br>
+                                        <span class="function">&nbsp;const</span> <span class="tooltip">aBoolean<span
+                                                class="tooltip-text">const aBoolean: boolean</span></span> = <span
+                                            class="tooltip">maybe<span class="tooltip-text">const maybe:
+                                                true</span></span>;<br>
+                                        <span class="comment">&nbsp;// So, it cannot be a string</span><br><span
+                                            class="function">&nbsp;const</span> <span class="tooltip err">aString<span
+                                                class="tooltip-text">const aString: string</span></span> = <span
+                                            class="tooltip">maybe<span class="tooltip-text">const maybe:
+                                                true</span></span>;<br>
+                                        <span class="error">Type 'boolean' is not assignable to type
+                                            'string'.</span><br>
+                                        }<br><br>
+                                        <span class="function">if</span> (<span class="function">typeof</span> <span
+                                            class="tooltip">maybe<span class="tooltip-text">const maybe:
+                                                unknown</span></span> === <span class="string">"string"</span>) {<br>
+                                        <span class="comment">&nbsp;// TypeScript knows that maybe is a string
+                                            now</span><br>
+                                        <span class="function">&nbsp;const</span> <span class="tooltip">aString<span
+                                                class="tooltip-text">const aString: string</span></span> = <span
+                                            class="tooltip">maybe<span class="tooltip-text">const maybe:
+                                                string</span></span>;<br>
+                                        <span class="comment">&nbsp;// So, it cannot be a boolean</span><br><span
+                                            class="function">&nbsp;const</span> <span class="tooltip err">aBoolean<span
+                                                class="tooltip-text">const aBoolean: boolean</span></span> = <span
+                                            class="tooltip">maybe<span class="tooltip-text">const maybe:
+                                                string</span></span>;<br>
+                                        <span class="error">Type 'string' is not assignable to type
+                                            'boolean'.</span><br>
+                                        }<br>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="any">
+                            <header>Any</header>
+                            <article>
+                                <p>In some situations, not all type information is available or it’s declaration would
+                                    take an inappropriate amount of effort. These may occur for values from code that
+                                    has been written without TypeScript or a 3rd party library. In these cases, we might
+                                    want to opt-out of type checking. To do so, we label these values with the
+                                    <em>any</em> type:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">declare function</span> <span
+                                            class="tooltip">getValue<span class="tooltip-text">function getValue(key:
+                                                string): any</span></span>(<span class="tooltip">key<span
+                                                class="tooltip-text">(parameter) key: string</span></span>: string):
+                                        any;<br>
+                                        <span class="comment">// OK, return value of 'getValue' is not
+                                            checked</span><br>
+                                        <span class="function">const</span> <span class="tooltip">str<span
+                                                class="tooltip-text">const str: string</span></span>: string = <span
+                                            class="tooltip">getValue<span class="tooltip-text">function getValue(key:
+                                                string): any</span></span>(<span class="string">"myString"</span>);<br>
+                                    </code>
+                                </div>
+                                <p>The <em>any</em> type is a powerful way to work with existing JavaScript, allowing
+                                    you to gradually opt-in and opt-out of type checking during compilation.</p>
+                                <p>Unlike <em>unknown</em>, variables of type <em>any</em> allow you to access arbitrary
+                                    properties, even ones that don’t exist. These properties include functions and
+                                    TypeScript will not check their existence or type:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span> <span class="tooltip">looselyTyped<span
+                                                class="tooltip-text">let looselyTyped: any</span></span>: any = <span
+                                            class="number">4</span>;<br>
+                                        <span class="comment">// OK, ifItExists might exist at runtime</span><br>
+                                        <span class="tooltip">looselyTyped<span class="tooltip-text">let looselyTyped:
+                                                any</span></span>.<span class="tooltip">ifItExists<span
+                                                class="tooltip-text">any</span></span>();<br>
+                                        <span class="comment">// OK, toFixed exists (but the compiler doesn't
+                                            check)</span><br>
+                                        <span class="tooltip">looselyTyped<span class="tooltip-text">let looselyTyped:
+                                                any</span></span>.<span class="tooltip">toFixed<span
+                                                class="tooltip-text">any</span></span>();<br><br>
+                                        <span class="function">let</span> <span class="tooltip">strictlyTyped<span
+                                                class="tooltip-text">let strictlyTyped: unknown</span></span>: unknown =
+                                        <span class="number">4</span>;<br>
+                                        <span class="tooltip err">strictlyTyped<span class="tooltip-text">let
+                                                strictlyTyped: unknown</span></span>.<span class="tooltip">toFixed<span
+                                                class="tooltip-text">any</span></span>();<br>
+                                        <span class="error">Object is of type 'unknown'.</span>
+                                    </code>
+                                </div>
+                                <p>The <em>any</em> will continue to propagate through your objects:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span> <span class="tooltip">looselyTyped<span
+                                                class="tooltip-text">let looselyTyped: any</span></span>: any = {};<br>
+                                        <span class="function">let</span> <span class="tooltip">d<span
+                                                class="tooltip-text">let d: any</span></span> = <span
+                                            class="tooltip">looselyTyped<span class="tooltip-text">let looselyTyped:
+                                                any</span></span>.<span class="tooltip">a<span
+                                                class="tooltip-text">any</span></span>.<span class="tooltip">b<span
+                                                class="tooltip-text">any</span></span>.<span class="tooltip">c<span
+                                                class="tooltip-text">any</span></span>.<span class="tooltip">d<span
+                                                class="tooltip-text">any</span></span>;<br>
+                                        <span class="obj-comment">//&nbsp;&nbsp;^ = led d: any</span>
+                                    </code>
+                                </div>
+                                <p>After all, remember that all the convenience of <em>any</em> comes at the cost of
+                                    losing type safety. Type safety is one of the main motivations for using TypeScript
+                                    and you should try to avoid using <em>any</em> when not necessary.</p>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="void">
+                            <header>Void</header>
+                            <article>
+                                <p><em>void</em> is a little like the opposite of <em>any</em>: the absence of having
+                                    any type at all. You may commonly see this as the return type of functions that do
+                                    not return a value:</p>
+
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">function</span> <span class="tooltip">warnUser<span
+                                                class="tooltip-text">function warnUser(): void</span></span>: void {<br>
+                                        <span class="tooltip">&nbsp;console<span class="tooltip-text">var console:
+                                                Console</span></span>.<span class="tooltip">log<span
+                                                class="tooltip-text">(method)
+                                                Console.log(...data: any[]): void</span></span>(<span
+                                            class="string">"This is my warning message"</span>);<br>
+                                        }
+                                    </code>
+                                </div>
+                                <p>Declaring variables of type <em>void</em> is not useful because you can only assign
+                                    <em>null</em> (only if <em>--strictNullChecks</em> is not specified, see next
+                                    section) or <em>undefined</em> to them:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span> <span class="tooltip">unusable<span
+                                                class="tooltip-text">let unusable: void</span></span> = <span
+                                            class="tooltip function">undefined<span class="tooltip-text">var
+                                                undefined</span></span>;<br>
+                                        <span class="comment">// OK if `--strictNullChecks` is not given</span><br>
+                                        <span class="tooltip">unusable<span class="tooltip-text">let unusable:
+                                                void</span></span> = <span class="function">null</span>;<br>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="null_and_undefined">
+                            <header>Null and Undefined</header>
+                            <article>
+                                <p>In TypeScript, both <em>undefined</em> and <em>null</em> actually have their own
+                                    types named <em>undefined</em> and <em>null</em> respectively. Much like
+                                    <em>void</em>, they’re not extremely useful on their own:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="comment">// Not much else we can assign to these
+                                            variables!</span><br>
+                                        <span class="function">let</span> <span class="tooltip">u<span
+                                                class="tooltip-text">let u: undefined</span></span>: undefined = <span
+                                            class="function tooltip">undefined<span class="tooltip-text">var
+                                                undefined</span></span>;<br>
+                                        <span class="function">let</span> <span class="tooltip">n<span
+                                                class="tooltip-text">let n: null</span></span>: null = <span
+                                            class="function">null</span>;<br>
+                                    </code>
+                                </div>
+                                <p>By default <em>null</em> and <em>undefined</em> are subtypes of all other types. That
+                                    means you can assign <em>null</em> and <em>undefined</em> to something like
+                                    <em>number</em>.</p>
+                                <p>However, when using the <em>--strictNullChecks</em> flag, <em>null</em> and
+                                    <em>undefined</em> are only assignable to <em>unknown</em>, any and their respective
+                                    types (the one exception being that <em>undefined</em> is also assignable to
+                                    <em>void</em>). This helps avoid many common errors. In cases where you want to pass
+                                    in either a <em>string</em> or <em>null</em> or <em>undefined</em>, you can use the
+                                    union type <em>string | null | undefined</em>.</p>
+                                <p>Union types are an advanced topic that we’ll cover in a later chapter.</p>
+                                <blockquote>As a note: we encourage the use of <em>--strictNullChecks</em> when
+                                    possible, but for the purposes of this handbook, we will assume it is turned off.
+                                </blockquote>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="never">
+                            <header>Never</header>
+                            <article>
+                                <p>The <em>never</em> type represents the type of values that never occur. For instance,
+                                    <em>never</em> is the return type for a function expression or an arrow function
+                                    expression that always throws an exception or one that never returns. Variables also
+                                    acquire the type <em>never</em> when narrowed by any type guards that can never be
+                                    true.</p>
+                                <p>The <em>never</em> type is a subtype of, and assignable to, every type; however, no
+                                    type is a subtype of, or assignable to, <em>never</em> (except <em>never</em>
+                                    itself). Even any isn’t assignable to <em>never</em>.</p>
+                                <p>Some examples of functions returning <em>never</em>:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="comment">// Function returning never must not have a reachable end
+                                            point</span><br>
+                                        <span class="function">function</span> <span class="tooltip">error<span
+                                                class="tooltip-text">function error(message: string):
+                                                never</span></span>(<span class="tooltip">message<span
+                                                class="tooltip-text">(parameter) message: string</span></span>: string):
+                                        never {<br>
+                                        <span class="function">&nbsp;throw new</span> <span class="tooltip">Error<span
+                                                class="tooltip-text">var Error: ErrorConstructor&NewLine;new (message?:
+                                                string | undefined) => Error</span></span>(<span
+                                            class="tooltip">message<span class="tooltip-text">(parameter) message:
+                                                string</span></span>);<br>
+                                        } <br><br>
+                                        <span class="comment">// Inferred return type is never</span><br>
+                                        <span class="function">function</span> <span class="tooltip">fail<span
+                                                class="tooltip-text">function fail(): never</span></span>() {<br>
+                                        <span class="function">&nbsp;return</span> <span class="tooltip">error<span
+                                                class="tooltip-text">function error(message: string):
+                                                never</span></span>(<span class="string">"Something failed"</span>);<br>
+                                        } <br><br>
+                                        <span class="comment">// Function returning never must not have a reachable end
+                                            point</span><br>
+                                        <span class="function">function</span> <span class="tooltip">infiniteLoop<span
+                                                class="tooltip-text">function infiniteLoop(): never</span></span>: never
+                                        {<br>
+                                        <span class="function">&nbsp;while</span> (<span class="function">true</span>)
+                                        {} <br>
+                                        }
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="object">
+                            <header>Object</header>
+                            <article>
+                                <p><em>object</em> is a type that represents the non-primitive type, i.e. anything that
+                                    is not <em>number</em>, <em>string</em>, <em>boolean</em>, <em>symbol</em>,
+                                    <em>null</em>, or <em>undefined</em>.</p>
+                                <p>With <em>object</em> type, APIs like <em>Object.create</em> can be better
+                                    represented. For example:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">declare function</span> <span class="tooltip">create<span
+                                                class="tooltip-text">function create(o: object | null):
+                                                void</span></span>(<span class="tooltip">o<span
+                                                class="tooltip-text">(parameter) o: object | null</span></span>: object
+                                        | null): void;<br><br>
+                                        <span class="comment">// OK</span>
+                                        <span class="tooltip">create<span class="tooltip-text">function create(o: object
+                                                | null): void</span></span>({ <span class="tooltip">prop<span
+                                                class="tooltip-text">(parameter) prop: number</span></span>: <span
+                                            class="number">0</span> });<br>
+                                        <span class="tooltip">create<span class="tooltip-text">function create(o: object
+                                                | null): void</span></span>(<span class="function">null</span>) <br><br>
+                                        <span class="tooltip">create<span class="tooltip-text">function create(o: object
+                                                | null): void</span></span>(<span class="number err">42</span>);<br>
+                                        <span class="error">Argument of type '42' is not assignable to parameter of type
+                                            'object | null'.</span><br>
+                                        <span class="tooltip">create<span class="tooltip-text">function create(o: object
+                                                | null): void</span></span>(<span
+                                            class="string err">"string"</span>);<br>
+                                        <span class="error">Argument of type '"string"' is not assignable to parameter
+                                            of type 'object | null'.</span><br>
+                                        <span class="tooltip">create<span class="tooltip-text">function create(o: object
+                                                | null): void</span></span>(<span
+                                            class="function eer">false</span>);<br>
+                                        <span class="error">Argument of type 'false' is not assignable to parameter of
+                                            type 'object | null'.</span><br>
+                                        <span class="tooltip">create<span class="tooltip-text">function create(o: object
+                                                | null): void</span></span>(<span
+                                            class="function err tooltip">undefined<span class="tooltip-text">var
+                                                undefined</span></span>);<br>
+                                        <span class="error">Argument of type 'undefined' is not assignable to parameter
+                                            of type 'object | null'.</span>
+                                    </code>
+                                </div>
+                                <p>Generally, you won’t need to use this.</p>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="type_assertions">
+                            <header>Type Assertions</header>
+                            <article>
+                                <p>Sometimes you’ll end up in a situation where you’ll know more about a value than
+                                    TypeScript does. Usually this will happen when you know the type of some entity
+                                    could be more specific than its current type.</p>
+                                <p>Type assertions are a way to tell the compiler “trust me, I know what I’m doing.” A
+                                    type assertion is like a type cast in other languages, but performs no special
+                                    checking or restructuring of data. It has no runtime impact, and is used purely by
+                                    the compiler. TypeScript assumes that you, the programmer, have performed any
+                                    special checks that you need.</p>
+                                <p>Type assertions have two forms.</p>
+                                <p>One is the <em>as</em>-syntax:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span> <span class="tooltip">someValue<span
+                                                class="tooltip-text">let someValue: any</span></span>: any = <span
+                                            class="string">"This is a string"</span>;<br>
+                                        <span class="function">let</span> <span class="tooltip">strLength<span
+                                                class="tooltip-text">let strLength: number</span></span>: number =
+                                        (<span class="tooltip">someValue<span class="tooltip-text">let someValue:
+                                                any</span></span> <span class="function">as</span> string).<span
+                                            class="tooltip">length<span class="tooltip-text">(property) String.length:
+                                                number</span></span>;<br>
+                                    </code>
+                                </div>
+                                <p>The other version is the “angle-bracket” syntax:</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">let</span> <span class="tooltip">someValue<span
+                                                class="tooltip-text">let someValue: any</span></span>: any = <span
+                                            class="string">"This is a string"</span>;<br>
+                                        <span class="function">let</span> <span class="tooltip">strLength<span
+                                                class="tooltip-text">let strLength: number</span></span>: number =
+                                        (&lt;string&gt;<span class="tooltip">someValue<span class="tooltip-text">let
+                                                someValue:
+                                                any</span></span>).<span class="tooltip">length<span
+                                                class="tooltip-text">(property) String.length:
+                                                number</span></span>;<br>
+                                    </code>
+                                </div>
+                                <p>The two samples are equivalent. Using one over the other is mostly a choice of
+                                    preference; however, when using TypeScript with JSX, only <em>as</em>-style
+                                    assertions are allowed.</p>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="a_note_about_let">
+                            <header>A Note about Let</header>
+                            <article>
+                                <p>You may have noticed that so far, we’ve been using the <em>let</em> keyword instead
+                                    of JavaScript’s <em>var</em> keyword which you might be more familiar with. The
+                                    <em>let</em> keyword is actually a newer JavaScript construct that TypeScript makes
+                                    available. You can read in the Handbook Reference on <a
+                                        href="https://www.typescriptlang.org/docs/handbook/variable-declarations.html"
+                                        target="_blank">Variable Declarations</a> more about how <em>let</em> and
+                                    <em>const</em> fix a lot of the problems with <em>var</em>.</p>
+                            </article>
+                        </section>
+                        <section class="sub-section" id="about_number_string_boolean_symbol_and_object">
+                            <header>About Number, String, Boolean, Symbol and Object</header>
+                            <article>
+                                <p>It can be tempting to think that the types <em>Number</em>, <em>String</em>,
+                                    <em>Boolean</em>, <em>Symbol</em>, or <em>Object</em> are the same as the lowercase
+                                    versions recommended above. These types do not refer to the language primitives
+                                    however, and almost never should be used as a type.</p>
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">function</span> <span class="tooltip">reverse<span
+                                                class="tooltip-text">functon reverse(s: String):
+                                                String</span></span>(<span class="tooltip">s<span
+                                                class="tooltip-text">(parameter) s: String</span></span>: <span
+                                            class="tooltip">String<span class="tooltip-text">interface
+                                                String</span></span>): <span class="tooltip">String<span
+                                                class="tooltip-text">interface String</span></span> { <br>
+                                        <span class="function">&nbsp;return</span> <span class="tooltip">s<span
+                                                class="tooltip-text">(parameter) s: String</span></span>.<span
+                                            class="tooltip">split<span class="tooltip-text">(method)
+                                                String.split(separator: string | Regex, limit?: number | undefined):
+                                                string[] (+1 overload)</span></span>(<span class="string"></span>).<span
+                                            class="tooltip">reverse<span class="tooltip-text">(method)
+                                                Array&lt;string&gt;.reverse(): string[]</span></span>().<span
+                                            class="tooltip">join<span class="tooltip-text">(method)
+                                                Array&lt;string&gt;.join(separator?: string | undefined):
+                                                string</span></span>(<span class="string">""</span>);<br>
+                                        }<br><br>
+                                        <span class="tooltip">reverse<span class="tooltip-text">function reverse(s:
+                                                String): String</span></span>(<span class="string">"hello
+                                            world"</span>);<br>
+                                    </code>
+                                </div>
+                                <p>Instead, use the types <em>number</em>, <em>string</em>, <em>boolean</em>,
+                                    <em>object</em> and <em>symbol</em>.</p>
+
+                                <div class="code-container">
+                                    <code>
+                                        <span class="function">function</span> <span class="tooltip">reverse<span
+                                                class="tooltip-text">functon reverse(s: String):
+                                                String</span></span>(<span class="tooltip">s<span
+                                                class="tooltip-text">(parameter) s: String</span></span>: string):
+                                        string { <br>
+                                        <span class="function">&nbsp;return</span> <span class="tooltip">s<span
+                                                class="tooltip-text">(parameter) s: String</span></span>.<span
+                                            class="tooltip">split<span class="tooltip-text">(method)
+                                                String.split(separator: string | Regex, limit?: number | undefined):
+                                                string[] (+1 overload)</span></span>(<span
+                                            class="string">""</span>).<span class="tooltip">reverse<span
+                                                class="tooltip-text">(method)
+                                                Array&lt;string&gt;.reverse(): string[]</span></span>().<span
+                                            class="tooltip">join<span class="tooltip-text">(method)
+                                                Array&lt;string&gt;.join(separator?: string | undefined):
+                                                string</span></span>(<span class="string">""</span>);<br>
+                                        }<br><br>
+                                        <span class="tooltip">reverse<span class="tooltip-text">function reverse(s:
+                                                string): string</span></span>(<span class="string">"hello
+                                            world"</span>);<br>
+                                    </code>
+                                </div>
+                            </article>
+                        </section>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="types_by_inference">
+                    <header>Types by Inference</header>
+                    <article>
+                        <p>TypeScript knows the JavaScript language and will generate types for you in many cases. For
+                            example in creating a variable and assigning it to a particular value, TypeScript will use
+                            the value as its type.</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">let</span> <span class="tooltip">helloWorld<span
+                                        class="tooltip-text">let helloWorld: string</span></span>: string = <span
+                                    class="string">"Hello World"</span>;<br>
+                                <span class="obj-comment">//&nbsp;&nbsp;^ = let helloWorld: string</span>
+                            </code>
+                        </div>
+                        <p>By understanding how JavaScript works, TypeScript can build a type-system which accepts
+                            JavaScript code but has types. This offers a type-system without needing to add extra
+                            characters to make types explicit in your code. Which is how TypeScript knows that
+                            <em>helloWorld</em> is a <em>string</em> in the above example.</p>
+                        <p>It’s quite possible that you have used VS Code with JavaScript, and had editor
+                            auto-completion as you worked. That is because the understanding of JavaScript baked into
+                            TypeScript has been used under-the-hood to improve working with JavaScript.</p>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="defining_types">
+                    <header>Defining Types</header>
+                    <article>
+                        <p>JavaScript is a dynamic language which allows for a lot of design patterns. Some design
+                            patterns can be hard to provide types for automatically (because they might use dynamic
+                            programming) in those cases TypeScript supports an extension of the JavaScript language
+                            which offers places for you to tell TypeScript what the types should be.</p>
+                        <p>Here is an example of creating an object which has an inferred type which includes <em>name:
+                                string</em> and <em>id: number</em>:</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">const</span> <span class="tooltip">user<span
+                                        class="tooltip-text">const user: {<br>&nbsp;name: string;<br>&nbsp;id:
+                                        number;<br>}</span></span> = {<br>
+                                <span class="tooltip">&nbsp;name<span class="tooltip-text">(property) name:
+                                        string</span></span>: <span class="string">"Hayes"</span>,<br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) id:
+                                        number</span></span>: <span class="number">0</span>,<br>
+                                };
+                            </code>
+                        </div>
+                        <p>An explicit way to describe this object’s shape is via an <em>interface</em> declaration:</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">interface</span> <span class="tooltip">User<span
+                                        class="tooltip-text">interface User</span></span> {<br>
+                                <span class="tooltip">&nbsp;name<span class="tooltip-text">(property) User.name:
+                                        string</span></span>: string;<br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) User.id:
+                                        number</span></span>: number;<br>
+                                };
+                            </code>
+                        </div>
+                        <p>You can then declare that a JavaScript object conforms to that shape of your new
+                            <em>interface</em> by using syntax like <em>: TypeName</em> after a variable declaration:
+                        </p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">const</span> <span class="tooltip">user<span
+                                        class="tooltip-text">const user: User</span></span>: <span
+                                    class="tooltip">User<span class="tooltip-text">interface User</span></span> = {<br>
+                                <span class="tooltip">&nbsp;name<span class="tooltip-text">(property) User.name:
+                                        string</span></span>: <span class="string">"Hayes"</span>,<br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) User.id:
+                                        number</span></span>: <span class="number">0</span>,<br>
+                                };
+                            </code>
+                        </div>
+                        <p>TypeScript will warn you if you provide an object which doesn’t match the interface you have
+                            provided:</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">interface</span> <span class="tooltip">User<span
+                                        class="tooltip-text">interface User</span></span> {<br>
+                                <span class="tooltip">&nbsp;name<span class="tooltip-text">(property) User.name:
+                                        string</span></span>: string;<br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) User.id:
+                                        number</span></span>: number;<br>
+                                };<br><br>
+                                <span class="function">const</span> <span class="tooltip">user<span
+                                        class="tooltip-text">const user: User</span></span>: <span
+                                    class="tooltip">User<span class="tooltip-text">interface User</span></span> = {<br>
+                                <span class="tooltip">&nbsp;username<span class="tooltip-text">(property) username:
+                                        string</span></span>: <span class="string">"Hayes"</span>,<br>
+                                <span class="error">Type '{ username: string; id: number; }' is not assignable to type
+                                    'User'.
+                                    Object literal may only specify known properties, and 'username' does not exist in
+                                    type 'User'.</span><br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) User.id:
+                                        number</span></span>: <span class="number">0</span>,<br>
+                                };
+                            </code>
+                        </div>
+                        <p>Because JavaScript supports classes and object-oriented programming, so does TypeScript - an
+                            interface declaration can also be used with classes:</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">interface</span> <span class="tooltip">User<span
+                                        class="tooltip-text">interface User</span></span> {<br>
+                                <span class="tooltip">&nbsp;name<span class="tooltip-text">(property) User.name:
+                                        string</span></span>: string;<br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) User.id:
+                                        number</span></span>: number;<br>
+                                };<br><br>
+                                <span class="function">class</span> <span class="tooltip">UserAccount<span
+                                        class="tooltip-text">class UserAccount</span></span> {<br>
+                                <span class="tooltip">&nbsp;name<span class="tooltip-text">(property) User.name:
+                                        string</span></span>: string;<br>
+                                <span class="tooltip">&nbsp;id<span class="tooltip-text">(property) User.id:
+                                        number</span></span>: number;<br><br>
+                                <span class="function">&nbsp;constructor</span>(<span class="tooltip">name<span
+                                        class="tooltip-text">(parameter) name: string</span></span>: string, <span
+                                    class="tooltip">id<span class="tooltip-text">(parameter) id: number</span></span>:
+                                number) {<br>
+                                <span class="function">&nbsp;&nbsp;this</span>.<span class="tooltip">name<span
+                                        class="tooltip-text">(property) UserAccount.name: string</span></span> = <span
+                                    class="tooltip">name<span class="tooltip-text">(parameter) name:
+                                        string</span></span>;<br>
+                                <span class="function">&nbsp;&nbsp;this</span>.<span class="tooltip">id<span
+                                        class="tooltip-text">(property) UserAccount.id: number</span></span> = <span
+                                    class="tooltip">id<span class="tooltip-text">(parameter) id:
+                                        number</span></span>;<br>
+                                &nbsp;} <br>
+                                } <br> <br>
+                                <span class="function">const</span> <span class="tooltip">user<span
+                                        class="tooltip-text">const user: User</span></span>: <span
+                                    class="tooltip">User<span class="tooltip-text">interface User</span></span> = <span
+                                    class="function">new</span> <span class="tooltip">UserAccount<span
+                                        class="tooltip-text">construct UserAccount(name: string, id: number)
+                                        UserAccount</span></span>(<span class="string">"Murphy"</span>, <span
+                                    class="number">1</span>);<br>
+
+                            </code>
+                        </div>
+                        <p>Interfaces can be used to annotate parameters and return values to functions:</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">function</span> <span class="tooltip">getAdminUser<span
+                                        class="tooltip-text">function getAdimUser(): User</span></span>(): <span
+                                    class="tooltip">User<span class="tooltip-text">interface User</span></span> { <br>
+                                <span class="comment">&nbsp;//...</span><br>
+                                } <br><br>
+                                <span class="function">function</span> <span class="tooltip">deleteUser<span
+                                        class="tooltip-text">function deleteUser(user: User): void</span></span>(<span
+                                    class="tooltip">user<span class="tooltip-text">(parameter) user: User</span></span>:
+                                <span class="tooltip">User<span class="tooltip-text">interface User</span></span>) {<br>
+                                <span class="comment">&nbsp;//...</span><br>
+                                }
+                            </code>
+                        </div>
+                        <p>There are already a small set of primitive types available in JavaScript: <em>boolean</em>,
+                            <em>bigint</em>, <em>null</em>, <em>number</em>, <em>string</em>, <em>symbol</em>,
+                            <em>object</em> and <em>undefined</em>, which you can use in an interface. TypeScript
+                            extends this list with a few more. for example: <em>any</em> (allow anything),
+                            <em>unknown</em> (ensure someone using this type declares what the type is), <em>never</em>
+                            (it’s not possible that this type could happen) <em>void</em> (a function which returns
+                            <em>undefined</em> or has no return value).</p>
+                        <p>You’ll see quite quickly that there are two syntaxes for building types: <em>Interfaces and
+                                Types</em> - you should prefer <em>interface</em>, and use <em>type</em> when you need
+                            specific features.</p>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="composing_types">
+                    <header>Composing Types</header>
+                    <article>
+                        <p>Similar to how you would create larger complex objects by composing them together TypeScript
+                            has tools for doing this with types. The two most popular techniques you would use in
+                            everyday code to create new types by working with many smaller types are Unions and
+                            Generics.</p>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="union">
+                    <header>Union</header>
+                    <article>
+                        <p>A union is a way to declare that a type could be one of many types. For example, you could
+                            describe a <em>boolean</em> type as being either <em>true</em> or <em>false</em>:</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">type</span> <span class="tooltip">MyBool<span
+                                        class="tooltip-text">type MyBool = boolean</span></span> = true | false;
+                            </code>
+                        </div>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="generics">
+                    <header>Generics</header>
+                    <article>
+                        <p>You can get very deep into the TypeScript generic system, but at a 1 minute high-level
+                            explanation, generics are a way to provide variables to types.</p>
+                        <p>A common example is an array, an array without generics could contain anything. An array with
+                            generics can describe what values are inside in the array.</p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">type</span> StringArray = Array&lt;string&gt;;<br>
+                                <span class="function">type</span> NumberArray = Array&lt;number&gt;;<br>
+                                <span class="function">type</span> ObjectWithNameArray = Array&lt;{ name: string }&gt;;
+                            </code>
+                        </div>
+                    </article>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
+                <section class="main-section" id="structural_type_system">
+                    <header>Structural Type System</header>
                 </section>
-                <section class="sub-section" id="">
-                    <header></header>
-                </section>
-                <section class="sub-section" id="">
-                    <header></header>
-                </section>
-                <section class="sub-section" id="">
-                    <header></header>
-                </section>
-                <section class="sub-section" id="">
-                    <header></header>
-                </section>
-                <section class="sub-section" id="">
-                    <header></header>
-                </section>
-                <section class="sub-section" id="">
-                    <header></header>
-                </section>
-                </article>
-            </section>
-            <section class="main-section" id="types_by_inference">
-                <header>Types by Inference</header>
-            </section>
-            <section class="main-section" id="defining_types">
-                <header>Defining Types</header>
-            </section>
-            <section class="main-section" id="composing_types">
-                <header>Composing Types</header>
-            </section>
-            <section class="main-section" id="union">
-                <header>Union</header>
-            </section>
-            <section class="main-section" id="generics">
-                <header>Generics</header>
-            </section>
-            <section class="main-section" id="structural_type_system">
-                <header>Structural Type System</header>
-            </section>
-            <!-- <section class="main-section" id="">
-                <header></header>
-            </section> -->
-        </div>
-    </main>
+            </div>
+        </main>
+    </div>
 </body>
+
 </html>
