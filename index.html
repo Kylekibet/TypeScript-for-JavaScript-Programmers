@@ -1111,6 +1111,48 @@
                             have. This is sometimes called “duck typing” or “structural typing”.</p>
                         <p>In a structural type system if two objects have the same shape, they are considered the same.
                         </p>
+                        <div class="code-container">
+                            <code>
+                                <span class="function">interface</span> <span class="tooltip">Point<span
+                                        class="tooltip-text">interface Point</span></span> { <br> <span
+                                    class="indent-1"></span><span class="tooltip">x<span class="tooltip-text">(property)
+                                        Point.x: number</span></span>: number;<br><span class="indent-1"></span><span
+                                    class="tooltip">y<span class="tooltip-text">(property) Point.y:
+                                        number</span></span>: number;<br>
+                                } <br><br>
+                                <span class="function">function</span> <span class="tooltip">printPoint<span
+                                        class="tooltip-text">function printPoint(p: Point): void</span></span>(<span
+                                    class="tooltip">p<span class="tooltip-text">(parameter) p: Point</span></span>:
+                                <span class="tooltip">Point<span class="tooltip-text">interface Point</span></span>) {
+                                <br>
+                                <span class="indent-1"></span><span class="tooltip">console<span
+                                        class="tooltip-text">var console: Console</span></span>.<span
+                                    class="tooltip">log<span class="tooltip-text">(method) Console.log(...data: any[]):
+                                        void</span></span>(<span class="string">`<span class="function">${</span><span
+                                        class="tooltip">p<span class="tooltip-text">(parameter) p:
+                                            Pont</span></span>.<span class="tooltip">x<span
+                                            class="tooltip-text">(parameter) Point.p: number</span></span><span
+                                        class="function">}</span>, <span class="function">${</span><span
+                                        class="tooltip">p<span class="tooltip-text">(parameter) p:
+                                            Pont</span></span>.<span class="tooltip">y<span
+                                            class="tooltip-text">(parameter) Point.y: number</span></span><span
+                                        class="function">}</span>`</span>); <br>
+                                } <br><br>
+                                <span class="comment">// prints "12, 26"</span><br>
+                                <span class="function">const</span> <span class="tooltip">point<span
+                                        class="tooltip-text">const point: = { <br><span class="indent-1"></span>x:
+                                        number;<br><span class="indent-1"></span>y: number;<br> };</span></span> = {
+                                <span class="tooltip">x<span class="tooltip-text">(property) x:
+                                        number</span></span>: <span class="number">12</span>, <span
+                                    class="tooltip">y<span class="tooltip-text">(property) y:
+                                        number</span></span>: <span class="number">26</span> };<br>
+                                <span class="tooltip">printPoint<span class="tooltip-text">function
+                                        printPoint(p: Point): void</span></span>(<span class="tooltip">point<span
+                                        class="tooltip-text">const point: = { <br><span class="indent-1"></span>x:
+                                        number;<br><span class="indent-1"></span>y: number;<br> };</span></span>);
+
+                            </code>
+                        </div>
                     </article>
                 </section>
             </div>
