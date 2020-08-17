@@ -1,3 +1,18 @@
+:root {
+    --indent-width: 7px;
+}
+
+.indent-1 {
+    margin-left: Calc(var(--indent-width)*1);
+}
+.indent-2 {
+    margin-left: Calc(var(--indent-width)*2);
+}
+.indent-3 {
+    margin-left: Calc(var(--indent-width)*3);
+}
+
+
 .tooltip-text {
     display: none;
 }
