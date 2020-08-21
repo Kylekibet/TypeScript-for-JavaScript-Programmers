@@ -1,5 +1,20 @@
 :root {
     --indent-width: 7px;
+    --function-color: blue;
+    --error-color: red;
+    --string-color: #FF9900;
+    --comment-color: green;
+    --number-color: #CC3300;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, ul  {
+    margin: 0;
+    padding: 0;
 }
 
 .indent-1 {
@@ -12,7 +27,51 @@
     margin-left: Calc(var(--indent-width)*3);
 }
 
-
 .tooltip-text {
     display: none;
+}
+
+.main-header {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.wraper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#navbar{
+    width: 300px;
+    height: 90vh;
+    background-color: aliceblue;
+    overflow: auto;
+}
+.content {
+    padding: 0.7rem;
+}
+
+.brand-name {
+    text-align: center;
+}
+.brand-name header {
+    font-size: 1.5rem;
+}
+ul {
+    /* overflow: auto; */
+}
+
+ul li {
+    list-style: none;
+    margin: 1rem 0;
+}
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+#main-doc {
+    width: 60%;
 }
